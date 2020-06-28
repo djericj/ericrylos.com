@@ -1,0 +1,31 @@
+<h1>DJ</h1>
+<p>
+  Eric's career as a DJ began all the way back in 1995, by trading in a set of
+  drums for a Technics SL1200 turntable. Since then, Eric has had numerous gigs
+  in clubs and raves with high profile headliners such as Tiesto, Sasha, Sandra
+  Collins, Eric Davenport, Uber Zone, and more. More of a studio rat these days,
+  he can still be heard regularly online as part of the
+  <a
+    href="https://www.protonradio.com/shows/233/soundscapes-digital"
+    target="_new"
+    >Soundscapes Digital</a
+  >
+  radio show on
+  <a href="https://www.saturosounds.com/" target="_new">Saturo Sounds</a> and
+  <a href="https://www.protonradio.com" target="_new">Proton Radio</a>.
+</p>
+
+<div class="row">
+  <div class="media col-3 mb-5" *ngFor="let mix of mixes">
+    <img
+      class="mr-3 mb-4"
+      style="width: 96px;"
+      [src]="'../assets/images/mixes/' + mix.attachment"
+      [alt]="mix.Name"
+    />
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ mix.artist }} {{ mix.Name }}</h5>
+      {{ mix.ShortDescription }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+<h1>Producer</h1>
+<p>
+  Since 1995, Eric has produced numerous original tracks across a wide variety
+  of genres. Eric has also had long time collaborations with DJ's Mario & Chris
+  Sterio, as well as a long relationship with the Soundscapes Digital record
+  label.
+</p>
+<section>
+  <h3>Tracks</h3>
+  <div class="row">
+    <div class="col-6">
+      <h4>As Evotone</h4>
+      <p>
+        <a href="https://www.beatport.com/artist/evotone/638200" target="_new"
+          >https://www.beatport.com/artist/evotone/638200</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of evotoneTracks.results">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h4>As Eric Rylos</h4>
+      <p>
+        <a
+          href="https://www.beatport.com/artist/eric-rylos/500884"
+          target="_new"
+          >https://www.beatport.com/artist/eric-rylos/500884</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of ericRylosTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h4>As Downgrooves</h4>
+      <p>
+        <a href="https://www.beatport.com/artist/downgrooves/293260"
+          >https://www.beatport.com/artist/downgrooves/293260</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of downgroovesTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h4>As part of Mario & Eric J</h4>
+      <p>
+        <a href="https://www.beatport.com/artist/mario-and-eric-j/5070"
+          >https://www.beatport.com/artist/mario-and-eric-j/5070</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of marioEricJTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Collaborators</h3>
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="col-8">
+            <div class="mr-4 float-left">
+              <i class="icon-windows s-36"></i>
+            </div>
+            <h6>
+              Mario P.
+            </h6>
+            <a href="">
+              <small>50 Tracks</small>
+            </a>
+          </div>
+          <a href="#" class="ml-auto"><i class="icon-link"></i></a>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="col-8">
+            <div class="mr-4 float-left">
+              <i class="icon-windows s-36"></i>
+            </div>
+            <h6>
+              Chris Sterio
+            </h6>
+            <a href="">
+              <small>50 Tracks</small>
+            </a>
+          </div>
+          <a href="#" class="ml-auto"><i class="icon-link"></i></a>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

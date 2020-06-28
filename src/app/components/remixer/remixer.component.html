@@ -1,0 +1,67 @@
+<h1>Remixer</h1>
+<p>
+  Along with his celebrated original works, Eric has remixed tracks for numerous
+  artists and record labels, both inside and outside the traditional genre
+  boundaries of electronic music.
+</p>
+<section>
+  <h3>Tracks</h3>
+  <div class="row">
+    <div class="col-6">
+      <h4>As Evotone</h4>
+      <p>
+        <a href="https://www.beatport.com/artist/evotone/638200" target="_new"
+          >https://www.beatport.com/artist/evotone/638200</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of evotoneTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h4>As Eric Rylos</h4>
+      <p>
+        <a
+          href="https://www.beatport.com/artist/eric-rylos/500884"
+          target="_new"
+          >https://www.beatport.com/artist/eric-rylos/500884</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of ericRylosTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h4>As Downgrooves</h4>
+      <p>
+        <a href="https://www.beatport.com/artist/downgrooves/293260"
+          >https://www.beatport.com/artist/downgrooves/293260</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of downgroovesTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h4>As part of Mario & Eric J</h4>
+      <p>
+        <a href="https://www.beatport.com/artist/mario-and-eric-j/5070"
+          >https://www.beatport.com/artist/mario-and-eric-j/5070</a
+        >
+      </p>
+      <ul>
+        <li *ngFor="let song of marioEricJTracks">
+          <app-song-detail [song]="song"></app-song-detail>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
