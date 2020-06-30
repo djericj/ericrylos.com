@@ -24,8 +24,13 @@
       [alt]="mix.Name"
     />
     <div class="media-body">
-      <h5 class="mt-0 mb-1">{{ mix.artist }} {{ mix.Name }}</h5>
+      <h5 class="mt-0 mb-1">{{ mix.artist }} - {{ mix.Name }}</h5>
       {{ mix.ShortDescription }}
+      <p>
+        <a [href]="'/assets/mp3/' + mix.Mp3File" target="_new"
+          >Listen & Download</a
+        >
+      </p>
     </div>
   </div>
 </div>
