@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, ModuleWithProviders } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./components/home/home.component";
 import { ProducerComponent } from "./components/producer/producer.component";
@@ -11,12 +11,44 @@ import { EngineerComponent } from "./components/engineer/engineer.component";
 import { ContactComponent } from "./components/contact/contact.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
   {
-    path: "**",
-    component: ErrorComponent,
+    path: "",
+    component: HomeComponent,
   },
+  {
+    path: "producer",
+    component: ProducerComponent,
+  },
+  {
+    path: "remixer",
+    component: RemixerComponent,
+  },
+  {
+    path: "engineer",
+    component: EngineerComponent,
+  },
+  {
+    path: "modular",
+    component: ModularComponent,
+  },
+  {
+    path: "dj",
+    component: DjComponent,
+  },
+  {
+    path: "software",
+    component: SoftwareComponent,
+  },
+  {
+    path: "contact",
+    component: ContactComponent,
+  },
+
+  { path: "**", component: ErrorComponent },
 ];
+
+export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes);
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {

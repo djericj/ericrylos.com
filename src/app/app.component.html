@@ -1,29 +1,5 @@
 <app-header></app-header>
-<div class="mb-5"></div>
 <div class="container-fluid">
-  <div clas="row">
-    <div class="col-auto mb-5 pb-5 border-bottom">
-      <a name="producer"></a><app-producer></app-producer>
-    </div>
-
-    <div class="col-auto mb-5 pb-5 border-bottom">
-      <a name="remixer"></a><app-remixer></app-remixer>
-    </div>
-
-    <div class="col-auto mb-5 pb-5 border-bottom">
-      <a name="modular"></a><app-modular></app-modular>
-    </div>
-
-    <div class="col-auto mb-5 pb-5 border-bottom">
-      <a name="dj"></a><app-dj></app-dj>
-    </div>
-
-    <div class="col-auto mb-5 pb-5 border-bottom">
-      <a name="software"></a><app-software></app-software>
-    </div>
-
-    <div class="col-auto mb-5 pb-5 border-bottom">
-      <a name="contact"></a><app-contact></app-contact>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
+<app-footer></app-footer>

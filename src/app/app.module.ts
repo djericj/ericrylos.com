@@ -16,6 +16,7 @@ import { SongDetailComponent } from "./components/song-detail/song-detail.compon
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { SoftwareComponent } from './components/software/software.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContactComponent } from './components/contact/contact.component';
     SongDetailComponent,
     SoftwareComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [HttpClient],

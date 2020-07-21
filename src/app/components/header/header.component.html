@@ -18,23 +18,36 @@
   >
     <ul class="navbar-nav mr-auto nav-fill w-50">
       <li class="nav-item border-md-right active">
-        <a class="nav-link" href="#producer">Producer</a>
+        <a class="nav-link" [routerLink]="['/producer']">Producer</a>
       </li>
       <li class=""></li>
       <li class="nav-item border-md-right">
-        <a class="nav-link" href="#remixer">Remixer</a>
+        <a class="nav-link" [routerLink]="['/remixer']">Remixer</a>
       </li>
       <li class="nav-item border-md-right">
-        <a class="nav-link" href="#modular">Modular</a>
+        <a class="nav-link" [routerLink]="['/engineer']">Engineer</a>
       </li>
       <li class="nav-item border-md-right">
-        <a class="nav-link" href="#dj">DJ</a>
+        <a class="nav-link" [routerLink]="['/modular']">Modular</a>
       </li>
       <li class="nav-item border-md-right">
-        <a class="nav-link" href="#software">Software Developer</a>
+        <a class="nav-link" [routerLink]="['/dj']">DJ</a>
+      </li>
+      <li class="nav-item border-md-right">
+        <a
+          class="nav-link"
+          [routerLink]="['/software']"
+          style="white-space: nowrap;"
+          >Software Developer</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact me</a>
+        <a
+          class="nav-link"
+          [routerLink]="['/contact']"
+          style="white-space: nowrap;"
+          >Contact me</a
+        >
       </li>
     </ul>
   </nav>
