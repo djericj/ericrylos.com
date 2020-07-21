@@ -1,4 +1,7 @@
 footer {
   background-color: #ccc;
   height: 160px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
