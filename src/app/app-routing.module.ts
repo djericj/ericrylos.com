@@ -9,6 +9,7 @@ import { ErrorComponent } from "./components/error/error.component";
 import { SoftwareComponent } from "./components/software/software.component";
 import { EngineerComponent } from "./components/engineer/engineer.component";
 import { ContactComponent } from "./components/contact/contact.component";
+import { ContactThanksComponent } from "./components/contact-thanks/contact-thanks.component";
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     path: "contact",
     component: ContactComponent,
   },
+  {
+    path: "contact-thanks",
+    component: ContactThanksComponent,
+  },
 
   { path: "**", component: ErrorComponent },
 ];
@@ -53,7 +58,7 @@ export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes);
   imports: [
     RouterModule.forRoot(routes, {
       initialNavigation: "enabled",
-      useHash: false,
+      useHash: true,
       onSameUrlNavigation: "reload",
     }),
   ],

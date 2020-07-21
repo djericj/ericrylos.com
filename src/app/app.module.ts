@@ -17,6 +17,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { SoftwareComponent } from './components/software/software.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactThanksComponent } from './components/contact-thanks/contact-thanks.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SoftwareComponent,
     ContactComponent,
     FooterComponent,
+    ContactThanksComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [HttpClient],
