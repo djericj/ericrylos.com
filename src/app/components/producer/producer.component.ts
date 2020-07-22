@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-producer",
@@ -6,7 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./producer.component.css"],
 })
 export class ProducerComponent implements OnInit {
-  constructor() {}
+  products;
 
-  ngOnInit() {}
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit() {
+    this.httpClient.get("assets/downgrooves.json").subscribe((data) => {
+      console.log(data);
+      this.products = data;
+    });
+  }
 }

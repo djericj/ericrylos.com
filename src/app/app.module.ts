@@ -14,10 +14,11 @@ import { HomeComponent } from "./components/home/home.component";
 import { ErrorComponent } from "./components/error/error.component";
 import { SongDetailComponent } from "./components/song-detail/song-detail.component";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { SoftwareComponent } from './components/software/software.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ContactThanksComponent } from './components/contact-thanks/contact-thanks.component';
+import { SoftwareComponent } from "./components/software/software.component";
+import { ContactComponent } from "./components/contact/contact.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { ContactThanksComponent } from "./components/contact-thanks/contact-thanks.component";
+import { ReplacePipe } from "./replace.pipe";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ContactThanksComponent } from './components/contact-thanks/contact-than
     ContactComponent,
     FooterComponent,
     ContactThanksComponent,
+    ReplacePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [HttpClient],

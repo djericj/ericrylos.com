@@ -16,21 +16,23 @@
 </p>
 
 <div class="row">
-  <div class="media col-3 mb-5" *ngFor="let mix of mixes">
+  <div class="col-4 mb-5" *ngFor="let mix of mixes">
     <img
       class="mr-3 mb-4"
-      style="width: 96px;"
       [src]="'../assets/images/mixes/' + mix.attachment"
       [alt]="mix.Name"
-    />
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">{{ mix.artist }} - {{ mix.Name }}</h5>
-      {{ mix.ShortDescription }}
-      <p>
-        <a [href]="'/assets/mp3/' + mix.Mp3File" target="_new"
-          >Listen & Download</a
+    /><br />
+    <div>
+      <p class="float-right mr-auto">
+        <a
+          class="btn btn-primary"
+          [href]="'/assets/mp3/' + mix.Mp3File"
+          target="_new"
+          >Listen</a
         >
       </p>
+      <h5 class="mt-0 mb-1">{{ mix.artist }} - {{ mix.Name }}</h5>
+      {{ mix.ShortDescription }}
     </div>
   </div>
 </div>

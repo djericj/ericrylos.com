@@ -5,7 +5,12 @@
   Sterio, as well as a long relationship with the Soundscapes Digital record
   label.
 </p>
-<section class="mb-5">
+<p>
+  Along with his celebrated original works, Eric has remixed tracks for numerous
+  artists and record labels, both inside and outside the traditional genre
+  boundaries of electronic music.
+</p>
+<!-- <section class="mb-5">
   <div class="row">
     <div class="col-6 border p-3">
       <h4>As Evotone</h4>
@@ -361,7 +366,7 @@
       </ul>
     </div>
   </div>
-</section>
+</section> -->
 
 <section>
   <h3>Collaborators</h3>
@@ -373,9 +378,11 @@
             <div class="mr-4 float-left">
               <i class="icon-windows s-36"></i>
             </div>
+
             <h6>
               Mario P.
             </h6>
+
             <p>
               Mario has collaborated with Eric for 30 years. Starting with a
               chance meeting in school, the two have been working together on
@@ -389,6 +396,15 @@
             <a href="">
               <small>50 Tracks</small>
             </a>
+          </div>
+          <div class="col-4">
+            <p class="float-right mr-auto">
+              <img
+                src="/assets/images/mario.jpg"
+                class="img-thumbnail"
+                style="width: 140px;"
+              />
+            </p>
           </div>
           <a href="#" class="ml-auto"><i class="icon-link"></i></a>
           <div></div>
@@ -406,6 +422,7 @@
             <h6>
               Chris Sterio
             </h6>
+
             <p>
               Chris has collaborated with both Mario & Eric J for nearly 20
               years. After signing the duo's first release to his label Source
@@ -420,9 +437,35 @@
               <small>50 Tracks</small>
             </a>
           </div>
+          <div class="col-4">
+            <p class="float-right mr-auto">
+              <img
+                src="/assets/images/Chris.jpg"
+                class="img-thumbnail"
+                style="width: 140px;"
+              />
+            </p>
+          </div>
           <a href="#" class="ml-auto"><i class="icon-link"></i></a>
           <div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <h3>Discography</h3>
+  <div class="row">
+    <div *ngFor="let d of products.results" class="col-4 mb-5">
+      <img [src]="d.artworkUrl100 | replace: '100':'500'" /><br />
+      <div class="float-right">
+        <a class="btn btn-primary" [href]="d.trackViewUrl" target="_new"
+          >Listen</a
+        >
+      </div>
+      <div>
+        <h5 class="mt-0 mb-1">{{ d.artistName }} - {{ d.trackName }}</h5>
+        {{ d.collectionCensoredName }}
       </div>
     </div>
   </div>
