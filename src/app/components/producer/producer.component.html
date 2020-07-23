@@ -455,21 +455,15 @@
 </section>
 <section>
   <h3>Discography</h3>
-  <div class="row">
-    <div *ngFor="let d of products.results" class="col-4 mb-5">
-      <img
-        [src]="'/assets/disc/downgrooves/' + d.trackId + '.jpg'"
-        class="img-responsive img-fluid"
-      /><br />
-      <div class="float-right">
-        <a class="btn btn-primary" [href]="d.trackViewUrl" target="_new"
-          >Listen</a
-        >
-      </div>
-      <div>
-        <h5 class="mt-0 mb-1">{{ d.artistName }} - {{ d.trackName }}</h5>
-        {{ d.collectionCensoredName }}
-      </div>
-    </div>
-  </div>
+  <h4>Downgrooves</h4>
+  <app-track-list [data]="downgrooves" [name]="'downgrooves'"></app-track-list>
+
+  <h4>Eric Rylos</h4>
+  <app-track-list [data]="ericRylos" [name]="'eric-rylos'"></app-track-list>
+
+  <h4>Evotone</h4>
+  <app-track-list [data]="evotone" [name]="'evotone'"></app-track-list>
+
+  <h4>Mario & Eric J</h4>
+  <app-track-list [data]="mej" [name]="'mario-and-eric-j'"></app-track-list>
 </section>

@@ -19,6 +19,7 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { ContactThanksComponent } from "./components/contact-thanks/contact-thanks.component";
 import { ReplacePipe } from "./replace.pipe";
+import { TrackListComponent } from './components/producer/track-list/track-list.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ReplacePipe } from "./replace.pipe";
     FooterComponent,
     ContactThanksComponent,
     ReplacePipe,
+    TrackListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [HttpClient],
