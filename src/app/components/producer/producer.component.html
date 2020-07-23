@@ -457,7 +457,10 @@
   <h3>Discography</h3>
   <div class="row">
     <div *ngFor="let d of products.results" class="col-4 mb-5">
-      <img [src]="d.artworkUrl100 | replace: '100':'500'" /><br />
+      <img
+        [src]="d.artworkUrl100 | replace: '100':'500'"
+        class="img-responsive img-fluid"
+      /><br />
       <div class="float-right">
         <a class="btn btn-primary" [href]="d.trackViewUrl" target="_new"
           >Listen</a
