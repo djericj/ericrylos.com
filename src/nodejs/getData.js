@@ -18,14 +18,13 @@ async function getData(name, url) {
   let rawdata = fs.readFileSync("../assets/" + name + ".json");
   let data = JSON.parse(rawdata);
   let savePath = "../assets/disc/" + name + "/";
-  //console.log(data);
 
   for (var d in data.results) {
     let t = data.results[d];
     let fileName = t.trackId + ".jpg";
-    let url = t.artworkUrl100.replace("100", "1000");
+    let url = t.artworkUrl100.replace("100x100", "1000x1000");
     let path = savePath + fileName;
-
+    console.log(url);
     download(url, path, () => {
       console.log(path + " ✅ Done!");
     });
