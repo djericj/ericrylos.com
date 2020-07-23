@@ -454,7 +454,7 @@
   </div>
 </section>
 <section>
-  <h3>Discography</h3>
+  <h3 class="mb-5">Discography</h3>
 
   <!-- <ngb-tabset>
     <ngb-tab title="Basic Setting">
@@ -491,95 +491,99 @@
       </ng-template>
     </ngb-tab>
   </ngb-tabset> -->
+  <div class="container">
+    <ul class="nav nav-pills nav-justified mb-5" id="nav-tab" role="tablist">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="nav-downgrooves-tab"
+          data-toggle="tab"
+          href="#nav-downgrooves"
+          role="tab"
+          aria-controls="nav-downgrooves"
+          aria-selected="true"
+          >as part of Downgrooves</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="nav-eric-rylos-tab"
+          data-toggle="tab"
+          href="#nav-eric-rylos"
+          role="tab"
+          aria-controls="nav-eric-rylos"
+          aria-selected="false"
+          >as Eric Rylos</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="nav-evotone-tab"
+          data-toggle="tab"
+          href="#nav-evotone"
+          role="tab"
+          aria-controls="nav-evotone"
+          aria-selected="false"
+          >as Evotone</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="nav-mej-tab"
+          data-toggle="tab"
+          href="#nav-mej"
+          role="tab"
+          aria-controls="nav-mej"
+          aria-selected="false"
+          >as part of Mario & Eric J</a
+        >
+      </li>
+    </ul>
 
-  <nav>
-    <div class="nav nav-pills nav-justified" id="nav-tab" role="tablist">
-      <a
-        class="nav-item nav-link active"
-        id="nav-downgrooves-tab"
-        data-toggle="tab"
-        href="#nav-downgrooves"
-        role="tab"
-        aria-controls="nav-downgrooves"
-        aria-selected="true"
-        >as part of Downgrooves</a
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-downgrooves"
+        role="tabpanel"
+        aria-labelledby="nav-downgrooves-tab"
       >
-      <a
-        class="nav-item nav-link"
-        id="nav-eric-rylos-tab"
-        data-toggle="tab"
-        href="#nav-eric-rylos"
-        role="tab"
-        aria-controls="nav-eric-rylos"
-        aria-selected="false"
-        >as Eric Rylos</a
+        <app-track-list
+          [data]="downgrooves"
+          [name]="'downgrooves'"
+        ></app-track-list>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-eric-rylos"
+        role="tabpanel"
+        aria-labelledby="nav-eric-rylos-tab"
       >
-      <a
-        class="nav-item nav-link"
-        id="nav-evotone-tab"
-        data-toggle="tab"
-        href="#nav-evotone"
-        role="tab"
-        aria-controls="nav-evotone"
-        aria-selected="false"
-        >as Evotone</a
+        <app-track-list
+          [data]="ericRylos"
+          [name]="'eric-rylos'"
+        ></app-track-list>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-evotone"
+        role="tabpanel"
+        aria-labelledby="nav-evotone-tab"
       >
-      <a
-        class="nav-item nav-link"
-        id="nav-mej-tab"
-        data-toggle="tab"
-        href="#nav-mej"
-        role="tab"
-        aria-controls="nav-mej"
-        aria-selected="false"
-        >as part of Mario & Eric J</a
+        <app-track-list [data]="evotone" [name]="'evotone'"></app-track-list>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-mej"
+        role="tabpanel"
+        aria-labelledby="nav-mej-tab"
       >
-    </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div class="row mt-3">
-      <div class="col-12">
-        <div
-          class="tab-pane fade show active"
-          id="nav-downgrooves"
-          role="tabpanel"
-          aria-labelledby="nav-downgrooves-tab"
-        >
-          <app-track-list
-            [data]="downgrooves"
-            [name]="'downgrooves'"
-          ></app-track-list>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="nav-eric-rylos"
-          role="tabpanel"
-          aria-labelledby="nav-eric-rylos-tab"
-        >
-          <app-track-list
-            [data]="ericRylos"
-            [name]="'eric-rylos'"
-          ></app-track-list>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="nav-evotone"
-          role="tabpanel"
-          aria-labelledby="nav-evotone-tab"
-        >
-          <app-track-list [data]="evotone" [name]="'evotone'"></app-track-list>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="nav-mej"
-          role="tabpanel"
-          aria-labelledby="nav-mej-tab"
-        >
-          <app-track-list
-            [data]="mej"
-            [name]="'mario-and-eric-j'"
-          ></app-track-list>
-        </div>
+        <app-track-list
+          [data]="mej"
+          [name]="'mario-and-eric-j'"
+        ></app-track-list>
       </div>
     </div>
   </div>
