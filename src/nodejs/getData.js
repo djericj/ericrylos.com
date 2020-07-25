@@ -10,14 +10,16 @@ const download = (url, path, callback) => {
 };
 
 async function getData(name, url) {
-  let path = "../assets/" + name + ".json";
+  let path = "/var/www/ericrylos.com/assets/" + name + ".json";
   download(url, path, () => {
     console.log(path + " ✅ Done!");
   });
 
-  let rawdata = fs.readFileSync("../assets/" + name + ".json");
+  let rawdata = fs.readFileSync(
+    "/var/www/ericrylos.com/assets/" + name + ".json"
+  );
   let data = JSON.parse(rawdata);
-  let savePath = "../assets/disc/" + name + "/";
+  let savePath = "/var/www/ericrylos.com/assets/disc/" + name + "/";
 
   for (var d in data.results) {
     let t = data.results[d];
